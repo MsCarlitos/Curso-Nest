@@ -55,6 +55,9 @@ export class CarsService {
     delete(id: string){
         let car = this.findOneById(id);
         this.cars = this.cars.filter( car => car.id !== id );
-    } 
+    }
 
+    fillCarWithSeedData( cars: Car[]) {
+        this.cars = cars;
+    }
 }
